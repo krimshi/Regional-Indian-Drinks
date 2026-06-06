@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cejopoptqbkah"]
+
+[ext_resource type="Script" uid="uid://bctk8cev74unm" path="res://Scenes/recipe_book_ui.gd" id="1_yijyf"]
+
+[node name="RecipeBookUI" type="CanvasLayer" unique_id=623831672 groups=["RecipeBookUI"]]
+process_mode = 3
+script = ExtResource("1_yijyf")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=1418880284]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="ColorRect" type="ColorRect" parent="DimBackground" unique_id=1080573486]
+layout_mode = 1
+offset_left = 36.999996
+offset_top = 27.000002
+offset_right = 77.0
+offset_bottom = 67.0
+scale = Vector2(30.119997, 16.48)
+color = Color(0.7384532, 0.73019, 0.6415602, 1)
+
+[node name="CenterLine" type="ColorRect" parent="DimBackground/ColorRect" unique_id=252545007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.079683304
+offset_top = -20.0
+offset_right = 0.11952019
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="EscText" type="Label" parent="DimBackground" unique_id=1899126207]
+layout_mode = 0
+offset_left = 1033.0
+offset_top = 27.0
+offset_right = 1188.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "[Esc] to close"
+
+[node name="CloseButton" type="Button" parent="DimBackground" unique_id=347814409]
+layout_mode = 0
+offset_left = 1202.0
+offset_top = 27.0
+offset_right = 1242.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0.8750814, 0, 0, 1)
+text = "X"
+
+[node name="Label" type="Label" parent="DimBackground" unique_id=850874241]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 93.0
+offset_right = 584.0
+offset_bottom = 647.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Phalsa Sharbat
+
+Ingredients Needed:
+• Washed Phalsa Berries (250g)
+• Sugar (4 tbsp)
+• Water (Bottled)
+• Black Salt (1/4 tsp)
+• Roasted Cumin Powder (1/4 tsp)
+• Ice Tray"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="DimBackground" unique_id=1004953340]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 82.0
+offset_right = 1223.0
+offset_bottom = 668.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Method:
+
+1. Prep: Wash the fresh Phalsa Berries in the kitchen sink.
+2. Blend: Place the Washed Berries, Sugar, and Water into the Mixer Grinder and blend.
+3. Strain: Take the blender jug to the Straining Station. Pour the mix and stir thoroughly to extract the pure juice.
+4. Mix: Place the Extracted Juice Bowl on the counter. Add Black Salt, Roasted Cumin Powder, and Water to complete the Sharbat.
+5. Serve: Place empty glasses on the dining table. Bring the finished Phalsa Sharbat and Ice Tray to the table to serve!"
+autowrap_mode = 2
+
+[connection signal="pressed" from="DimBackground/CloseButton" to="." method="_on_close_button_pressed"]

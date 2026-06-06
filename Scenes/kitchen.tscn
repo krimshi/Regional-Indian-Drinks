@@ -1,0 +1,307 @@
+[gd_scene format=3 uid="uid://dalmbji5jssjl"]
+
+[ext_resource type="PackedScene" uid="uid://dqc7locob84yi" path="res://Scenes/kitchen_room.tscn" id="1_7u47w"]
+[ext_resource type="PackedScene" uid="uid://cnfejtca8vuvj" path="res://Scenes/fridge.tscn" id="2_6pjjr"]
+[ext_resource type="PackedScene" uid="uid://dvsdd5vthgbea" path="res://Scenes/player.tscn" id="3_6pjjr"]
+[ext_resource type="PackedScene" uid="uid://bvlsauol871cm" path="res://Scenes/ceiling_lamp.tscn" id="3_lvc4q"]
+[ext_resource type="PackedScene" uid="uid://csr0dg4l5dp4i" path="res://Scenes/kitchen_counter.tscn" id="6_jbuf1"]
+[ext_resource type="PackedScene" uid="uid://cm6scg2nr8lif" path="res://Scenes/grass_block.tscn" id="7_cetdd"]
+[ext_resource type="PackedScene" uid="uid://c2tvgpb7pjsol" path="res://Scenes/tree.tscn" id="8_kr0tx"]
+[ext_resource type="PackedScene" uid="uid://8rwc0bffuduw" path="res://Scenes/pine_tree.tscn" id="9_2cl3g"]
+[ext_resource type="PackedScene" uid="uid://byvfd75jie4ih" path="res://Scenes/grass.tscn" id="10_lkloo"]
+[ext_resource type="PackedScene" uid="uid://c41fk8xpvxtol" path="res://Scenes/barrel.tscn" id="11_ykbxl"]
+[ext_resource type="PackedScene" uid="uid://cs35ogiphfc7j" path="res://Scenes/flowers.tscn" id="12_32235"]
+[ext_resource type="PackedScene" uid="uid://dacx2ge6o8weh" path="res://Scenes/flowers_tall.tscn" id="13_5ukof"]
+[ext_resource type="PackedScene" uid="uid://bn534chm0l0h3" path="res://Scenes/dummy_wall.tscn" id="14_ykbxl"]
+[ext_resource type="PackedScene" uid="uid://b4vph5fft0uou" path="res://Scenes/dummy_wall1.tscn" id="15_32235"]
+[ext_resource type="PackedScene" uid="uid://dhxe3by5kilwr" path="res://Scenes/dummy_wall_3.tscn" id="16_5ukof"]
+[ext_resource type="PackedScene" uid="uid://dci02c6wc14ax" path="res://Item Scenes/phalsa_berry.tscn" id="16_iw6an"]
+[ext_resource type="PackedScene" uid="uid://cgh15ah02c5es" path="res://Item Scenes/sugar.tscn" id="18_2l700"]
+[ext_resource type="PackedScene" uid="uid://xbephqxbvox5" path="res://Item Scenes/water_bottle.tscn" id="19_r0dk1"]
+[ext_resource type="PackedScene" uid="uid://c2jroj10fmi30" path="res://UI/recipe_ui.tscn" id="20_i6vcq"]
+[ext_resource type="PackedScene" uid="uid://dlxdvxi2m6147" path="res://Scenes/mixer_mini_game.tscn" id="21_bgcuo"]
+[ext_resource type="PackedScene" uid="uid://bk5id0jvh0rsc" path="res://Item Scenes/strainer.scn" id="21_m1yx5"]
+[ext_resource type="PackedScene" uid="uid://ck2kmu3x3hmr3" path="res://Item Scenes/glass_bowl.tscn" id="22_hc3lq"]
+[ext_resource type="PackedScene" uid="uid://blxjk1n4rpyyv" path="res://Item Scenes/wooden_spatula.tscn" id="23_hc3lq"]
+[ext_resource type="PackedScene" uid="uid://bjmk6hqn4duj1" path="res://Item Scenes/black_salt.tscn" id="24_1i8y3"]
+[ext_resource type="PackedScene" uid="uid://bcbnuwsc6tls" path="res://Item Scenes/roasted_cumin_powder.tscn" id="25_hqj0s"]
+[ext_resource type="PackedScene" uid="uid://ge02da2oqs38" path="res://Scenes/dining_table.tscn" id="26_ocwuj"]
+[ext_resource type="PackedScene" uid="uid://bavtnvw6rky1o" path="res://Scenes/ice_tray.tscn" id="27_v7v86"]
+[ext_resource type="PackedScene" uid="uid://vlk0yt34sw0u" path="res://Scenes/win_screen.tscn" id="28_j87t8"]
+[ext_resource type="PackedScene" uid="uid://ww4x4v4tg51s" path="res://Scenes/recipe_book.tscn" id="29_3287f"]
+[ext_resource type="PackedScene" uid="uid://cejopoptqbkah" path="res://Scenes/recipe_book_ui.tscn" id="30_ra1nx"]
+[ext_resource type="PackedScene" uid="uid://ctxokaqkcpnnp" path="res://Scenes/controls_ui.tscn" id="31_rdhyb"]
+[ext_resource type="PackedScene" uid="uid://cqt70qm3f8gx4" path="res://Scenes/quick_menu_ui.tscn" id="32_wj3rr"]
+[ext_resource type="PackedScene" uid="uid://bw0vg32y7drsw" path="res://Scenes/door.tscn" id="33_csig0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lvc4q"]
+sky_horizon_color = Color(0.62824935, 0.4707554, 0.3339311, 1)
+ground_bottom_color = Color(0.40990147, 0.35521927, 0.29381514, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_6pjjr"]
+sky_material = SubResource("ProceduralSkyMaterial_lvc4q")
+
+[sub_resource type="Environment" id="Environment_pb1w8"]
+background_mode = 2
+sky = SubResource("Sky_6pjjr")
+tonemap_mode = 3
+tonemap_exposure = 0.8
+glow_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.8115801, 0.74687696, 0.31989056, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykbxl"]
+albedo_color = Color(0.18072194, 0.18072197, 0.18072197, 1)
+
+[node name="Kitchen" type="Node3D" unique_id=1076236224]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1994325465]
+environment = SubResource("Environment_pb1w8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1450901643]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 10.548872, 0.86890745)
+light_color = Color(1, 0.72156864, 0.47058824, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=895620354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.334559, 0)
+light_color = Color(1, 0.94509804, 0.84313726, 1)
+light_energy = 1.5
+shadow_enabled = true
+omni_range = 15.0
+
+[node name="kitchen-room" parent="." unique_id=2047693666 instance=ExtResource("1_7u47w")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.0001514554, 0.002276063, 0.0008432865)
+
+[node name="kitchen-room2" parent="." unique_id=916508329 instance=ExtResource("1_7u47w")]
+transform = Transform3D(-4, 0, -3.496911e-07, 0, 4, 0, 3.496911e-07, 0, -4, 0.0001514554, 0.002276063, 29.208042)
+
+[node name="Player" parent="." unique_id=1610809803 instance=ExtResource("3_6pjjr")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.9138255, 1.1262038, 0)
+
+[node name="Ceiling-Lamp" parent="." unique_id=1883132955 instance=ExtResource("3_lvc4q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4464455, 0)
+
+[node name="Fridge" parent="." unique_id=1883661576 instance=ExtResource("2_6pjjr")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 5.1379232, 0.40119123, 4.9097733)
+
+[node name="Kitchen-Counter" parent="." unique_id=1931137095 instance=ExtResource("6_jbuf1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.1, 0.4441277, 0.12786394)
+
+[node name="Outdoor" type="Node3D" parent="." unique_id=564184330]
+
+[node name="GrassBlock" parent="Outdoor" unique_id=1228379142 instance=ExtResource("7_cetdd")]
+transform = Transform3D(266.5122, 0, 0, 0, 10, 0, 0, 0, 299.35706, 0.002278328, -9.690038, 16.258503)
+
+[node name="Tree" parent="Outdoor" unique_id=2134770590 instance=ExtResource("8_kr0tx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.7575207, 0.31757784, 12.900291)
+
+[node name="Tree3" parent="Outdoor" unique_id=1924252367 instance=ExtResource("8_kr0tx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20.063574, 0.31757784, 22.294937)
+
+[node name="Tree4" parent="Outdoor" unique_id=2073822987 instance=ExtResource("8_kr0tx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15.610239, 0.31757784, 29.145689)
+
+[node name="Tree5" parent="Outdoor" unique_id=1048923291 instance=ExtResource("8_kr0tx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 17.972288, 0.31757784, 29.145689)
+
+[node name="Tree2" parent="Outdoor" unique_id=168981207 instance=ExtResource("8_kr0tx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.7613006, 0.31757784, 15.642138)
+
+[node name="Grass" parent="Outdoor" unique_id=284004312 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.414547, 0.19904923, 13.143888)
+
+[node name="Grass2" parent="Outdoor" unique_id=617318861 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.010278, 0.19904923, 14.977324)
+
+[node name="Grass3" parent="Outdoor" unique_id=43597496 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.010278, 0.19904923, 9.373674)
+
+[node name="Grass4" parent="Outdoor" unique_id=1729742967 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -6.514678, 0.19904923, 11.522806)
+
+[node name="Barrel" parent="Outdoor" unique_id=877520459 instance=ExtResource("11_ykbxl")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.394081, 0.19904923, 16.920073)
+
+[node name="Flowers" parent="Outdoor" unique_id=2110096373 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.07081509, 0.19904923, 12.102407)
+
+[node name="Flowers2" parent="Outdoor" unique_id=276488304 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -5.360984, 0.19904923, 13.860325)
+
+[node name="FlowersTall" parent="Outdoor" unique_id=779899917 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.3780434, 0.19904923, 12.672441)
+
+[node name="FlowersTall2" parent="Outdoor" unique_id=1231806013 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.1697426, 0.19904923, 12.2036705)
+
+[node name="FlowersTall3" parent="Outdoor" unique_id=716489012 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -6.582351, 0.19904923, 18.721912)
+
+[node name="FlowersTall4" parent="Outdoor" unique_id=1439417120 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.219943, 0.19904923, 9.299995)
+
+[node name="FlowersTall5" parent="Outdoor" unique_id=1353070167 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.1653991, 0.19904923, 9.299995)
+
+[node name="FlowersTall6" parent="Outdoor" unique_id=201071542 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.6299684, 0.19904923, 16.6671)
+
+[node name="PineTree" parent="Outdoor" unique_id=481057155 instance=ExtResource("9_2cl3g")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.414547, 0.19904923, 16.403418)
+
+[node name="Grass5" parent="Outdoor" unique_id=508594518 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.303768, 0.19904923, 41.722054)
+
+[node name="Grass6" parent="Outdoor" unique_id=2026628517 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.708036, 0.19904923, 43.55549)
+
+[node name="Grass7" parent="Outdoor" unique_id=154401336 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.708036, 0.19904923, 37.95184)
+
+[node name="Grass8" parent="Outdoor" unique_id=1429326908 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 19.203636, 0.19904923, 40.10097)
+
+[node name="Barrel2" parent="Outdoor" unique_id=1042972455 instance=ExtResource("11_ykbxl")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 22.324234, 0.19904923, 45.498238)
+
+[node name="Flowers3" parent="Outdoor" unique_id=903127632 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 25.789131, 0.19904923, 40.680573)
+
+[node name="Flowers4" parent="Outdoor" unique_id=1629593789 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 20.35733, 0.19904923, 42.438488)
+
+[node name="FlowersTall7" parent="Outdoor" unique_id=419795246 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 22.340271, 0.19904923, 41.250607)
+
+[node name="FlowersTall8" parent="Outdoor" unique_id=766192132 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.548573, 0.19904923, 40.781837)
+
+[node name="FlowersTall9" parent="Outdoor" unique_id=396163199 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 19.135963, 0.19904923, 47.30008)
+
+[node name="FlowersTall10" parent="Outdoor" unique_id=1333300259 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 18.498371, 0.19904923, 37.87816)
+
+[node name="FlowersTall11" parent="Outdoor" unique_id=126695005 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.552916, 0.19904923, 37.87816)
+
+[node name="FlowersTall12" parent="Outdoor" unique_id=1241142458 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 27.348284, 0.19904923, 45.245266)
+
+[node name="PineTree3" parent="Outdoor" unique_id=1598736803 instance=ExtResource("9_2cl3g")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.303768, 0.19904923, 44.981583)
+
+[node name="Grass9" parent="Outdoor" unique_id=1759332304 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.221695, 0.19904923, 13.143888)
+
+[node name="Grass10" parent="Outdoor" unique_id=1360352618 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.625963, 0.19904923, 14.977324)
+
+[node name="Grass11" parent="Outdoor" unique_id=1663052520 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.625963, 0.19904923, 9.373674)
+
+[node name="Grass12" parent="Outdoor" unique_id=421836799 instance=ExtResource("10_lkloo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 19.121563, 0.19904923, 11.522806)
+
+[node name="Barrel3" parent="Outdoor" unique_id=867818385 instance=ExtResource("11_ykbxl")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 22.24216, 0.19904923, 16.920073)
+
+[node name="Flowers5" parent="Outdoor" unique_id=1691851041 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 25.707058, 0.19904923, 12.102407)
+
+[node name="Flowers6" parent="Outdoor" unique_id=1433590716 instance=ExtResource("12_32235")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 20.275257, 0.19904923, 13.860325)
+
+[node name="FlowersTall13" parent="Outdoor" unique_id=1472061994 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 22.258198, 0.19904923, 12.672441)
+
+[node name="FlowersTall14" parent="Outdoor" unique_id=552346386 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 21.4665, 0.19904923, 12.2036705)
+
+[node name="FlowersTall15" parent="Outdoor" unique_id=1923491519 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 19.05389, 0.19904923, 18.721912)
+
+[node name="FlowersTall16" parent="Outdoor" unique_id=482414928 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 18.416298, 0.19904923, 9.299995)
+
+[node name="FlowersTall17" parent="Outdoor" unique_id=1859693892 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.470842, 0.19904923, 9.299995)
+
+[node name="FlowersTall18" parent="Outdoor" unique_id=1691402960 instance=ExtResource("13_5ukof")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 27.26621, 0.19904923, 16.6671)
+
+[node name="PineTree2" parent="Outdoor" unique_id=954183963 instance=ExtResource("9_2cl3g")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.221695, 0.19904923, 16.403418)
+
+[node name="DummyWall" parent="Outdoor" unique_id=654626200 instance=ExtResource("14_ykbxl")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -17.531158, 0, 18.36909)
+
+[node name="Road" type="CSGBox3D" parent="Outdoor" unique_id=2090745178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 22.5)
+size = Vector3(6, 1, 60)
+material = SubResource("StandardMaterial3D_ykbxl")
+
+[node name="Road2" type="CSGBox3D" parent="Outdoor" unique_id=341082583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.412512, 0, 22.5)
+size = Vector3(6, 1, 60)
+material = SubResource("StandardMaterial3D_ykbxl")
+
+[node name="DummyWall2" parent="Outdoor" unique_id=807029843 instance=ExtResource("15_32235")]
+transform = Transform3D(-2.9953222, 0, -0.16746467, 0, 3, 0, 0.16746467, 0, -2.9953222, 21.63541, 0, 28.986467)
+
+[node name="DummyWall3" parent="Outdoor" unique_id=858743641 instance=ExtResource("16_5ukof")]
+transform = Transform3D(-1.3113417e-07, 0, 3.0000002, 0, 3, 0, -3.0000002, 0, -1.3113417e-07, -17.769407, 0, 34.18561)
+
+[node name="DummyWall4" parent="Outdoor" unique_id=108053449 instance=ExtResource("16_5ukof")]
+transform = Transform3D(-1.3113417e-07, 0, 3.0000002, 0, 3, 0, -3.0000002, 0, -1.3113417e-07, 24.06717, 0, 54.705666)
+
+[node name="Phalsa_Berries" parent="." unique_id=149203683 instance=ExtResource("16_iw6an")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8429627, 1.8894858, 4.601533)
+
+[node name="Water_Bottle" parent="." unique_id=552617320 instance=ExtResource("19_r0dk1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.968012, 1.8127403, 4.771661)
+axis_lock_angular_y = true
+
+[node name="RecipeUI" parent="." unique_id=1694693319 groups=["RecipeMenu"] instance=ExtResource("20_i6vcq")]
+
+[node name="MixerMiniGame" parent="." unique_id=694800546 instance=ExtResource("21_bgcuo")]
+
+[node name="Strainer" parent="." unique_id=1889659063 instance=ExtResource("21_m1yx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.837401, 1.2823578, 0.86473286)
+
+[node name="Glass_Bowl" parent="." unique_id=1008054184 instance=ExtResource("22_hc3lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9126635, 1.1905687, -0.7138417)
+
+[node name="Wooden_Spoon" parent="." unique_id=1271035805 instance=ExtResource("23_hc3lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7087183, 0.5450225, -0.9502709)
+
+[node name="Black_Salt" parent="." unique_id=807265819 instance=ExtResource("24_1i8y3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.740163, 1.194411, 2.6440945)
+
+[node name="Sugar" parent="." unique_id=83987632 instance=ExtResource("18_2l700")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.735093, 1.2123456, 2.5511053)
+
+[node name="Roasted_Cumin_Powder" parent="." unique_id=1596778511 instance=ExtResource("25_hqj0s")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.735093, 1.2676481, 2.7667959)
+
+[node name="Dining_Table" parent="." unique_id=824464597 instance=ExtResource("26_ocwuj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.3, 0.5, 0.7)
+
+[node name="Ice_Tray" parent="." unique_id=1918303358 instance=ExtResource("27_v7v86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8015037, 2.5330327, 4.860235)
+
+[node name="WinScreen" parent="." unique_id=1095611705 instance=ExtResource("28_j87t8")]
+
+[node name="Recipe_Book" parent="." unique_id=1692518175 instance=ExtResource("29_3287f")]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, 5.6625867, 3.0880435, 0)
+
+[node name="RecipeBookUI" parent="." unique_id=623831672 instance=ExtResource("30_ra1nx")]
+
+[node name="ControlsUI" parent="." unique_id=317418124 instance=ExtResource("31_rdhyb")]
+
+[node name="QuickMenuUI" parent="." unique_id=779079184 instance=ExtResource("32_wj3rr")]
+
+[node name="Door" parent="." unique_id=1646790710 instance=ExtResource("33_csig0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.100102, 2.4217935, 0)

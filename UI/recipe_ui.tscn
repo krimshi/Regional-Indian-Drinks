@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c2jroj10fmi30"]
+
+[ext_resource type="Script" uid="uid://vq7itgdnkllk" path="res://recipe_ui.gd" id="1_rat0l"]
+
+[node name="RecipeUI" type="CanvasLayer" unique_id=1694693319]
+script = ExtResource("1_rat0l")
+
+[node name="Panel" type="Panel" parent="." unique_id=147797149]
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.4
+anchor_right = 0.6
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpinBox" type="SpinBox" parent="Panel" unique_id=1251401605]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.25
+offset_top = -15.5
+offset_right = 43.25
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+alignment = 1
+suffix = "tbsp"
+
+[node name="Button" type="Button" parent="Panel" unique_id=754381273]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = 27.999985
+offset_right = 19.5
+offset_bottom = 58.999985
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "Add"
+
+[node name="Label" type="Label" parent="Panel" unique_id=1880015705]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -69.0
+offset_top = 19.0
+offset_right = 69.0
+offset_bottom = 42.0
+grow_horizontal = 2
+text = "How much sugar?"

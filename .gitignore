@@ -1,0 +1,14 @@
+# Godot-specific ignores
+.godot/
+*.translation
+
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+
+# Build/Export artifacts (Optional, keeps your repo light)
+*.exe
+*.zip
+*.pck
+*.wasm
+*.html

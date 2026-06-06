@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dlxdvxi2m6147"]
+
+[ext_resource type="Script" uid="uid://bqf8p1x6ivl58" path="res://mixer_mini_game.gd" id="1_qimgw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qimgw"]
+
+[node name="MixerMiniGame" type="CanvasLayer" unique_id=694800546 groups=["MixerUI"]]
+script = ExtResource("1_qimgw")
+
+[node name="Panel" type="Panel" parent="." unique_id=415985751]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = -60.0
+offset_right = 540.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qimgw")
+
+[node name="RedBar" type="ColorRect" parent="Panel" unique_id=1442626558]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -830.0
+offset_top = -15.0
+offset_right = -430.00024
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.7714544, 0, 0.06008304, 1)
+
+[node name="GreenZone" type="ColorRect" parent="Panel" unique_id=1917365661]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -15.0
+offset_right = -350.00024
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(4.8323272e-05, 0.87446654, 0.42853236, 1)
+
+[node name="Arrow" type="ColorRect" parent="Panel" unique_id=1676390420]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 5.0
+offset_right = 250.0
+offset_bottom = 55.0
+color = Color(0, 0, 0, 1)
+
+[node name="StatusLabel" type="Label" parent="Panel" unique_id=130379634]
+layout_mode = 0
+offset_left = 250.0
+offset_top = -80.0
+offset_right = 290.0
+offset_bottom = -35.0
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1

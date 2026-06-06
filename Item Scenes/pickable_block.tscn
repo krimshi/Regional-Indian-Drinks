@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d3eft3geq3ckk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjj1m"]
+albedo_color = Color(1, 1, 0.49411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5fme6"]
+material = SubResource("StandardMaterial3D_fjj1m")
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fme6"]
+albedo_color = Color(0.8769183, 0.42926705, 0.34808782, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_o5vnq"]
+material = SubResource("StandardMaterial3D_5fme6")
+radius = 0.1
+height = 0.1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o5vnq"]
+size = Vector3(0.2, 0.27338868, 0.2)
+
+[node name="pickableBlock" type="RigidBody3D" unique_id=1726993967]
+collision_layer = 3
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=879779796]
+mesh = SubResource("BoxMesh_5fme6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=68122009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12310885, 0)
+mesh = SubResource("SphereMesh_o5vnq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1430056202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.036694344, 0)
+shape = SubResource("BoxShape3D_o5vnq")
+debug_color = Color(0.96579474, 0, 0.48745131, 0.41960785)

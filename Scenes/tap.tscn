@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bnkqgdptoffp2"]
+
+[ext_resource type="Script" uid="uid://dyvgotepmq2b4" path="res://Scenes/tap.gd" id="1_h76s5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mqa6"]
+albedo_color = Color(0.4677419, 0.46131676, 0.4141019, 1)
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h76s5"]
+albedo_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o028q"]
+albedo_color = Color(0, 0.5921569, 0.5921569, 0.1882353)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h76s5"]
+material = SubResource("StandardMaterial3D_o028q")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qc4e1"]
+size = Vector3(0.04534912, 0.16656494, 0.16213226)
+
+[node name="Tap" type="Node3D" unique_id=1030038441]
+
+[node name="Body" type="CSGBox3D" parent="." unique_id=795136331]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.24040467, 0)
+use_collision = true
+size = Vector3(0.5, 2.5, 0.5)
+material = SubResource("StandardMaterial3D_7mqa6")
+
+[node name="Body2" type="CSGBox3D" parent="." unique_id=1865874418]
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0.44, 0.24931052)
+use_collision = true
+size = Vector3(0.5, 2, 0.5)
+material = SubResource("StandardMaterial3D_7mqa6")
+
+[node name="Spout" type="CSGCylinder3D" parent="." unique_id=1198164350]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.37885374, 0.38475493)
+radius = 0.4
+height = 0.2
+material = SubResource("StandardMaterial3D_h76s5")
+
+[node name="WaterRayCast" type="RayCast3D" parent="Spout" unique_id=698217200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19528008, 0)
+target_position = Vector3(0, -10, 0)
+
+[node name="StreamMesh" type="MeshInstance3D" parent="Spout" unique_id=412611102]
+mesh = SubResource("CylinderMesh_h76s5")
+
+[node name="Handle" type="Node3D" parent="." unique_id=1158007918]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Handle" unique_id=657980948]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0814828, 0.070164695, -0.0014782995)
+use_collision = true
+size = Vector3(0.8, 0.5, 3)
+material = SubResource("StandardMaterial3D_h76s5")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Handle" unique_id=1322573563]
+transform = Transform3D(0.05, 0, 0, 0, -2.1855695e-09, -0.05, 0, 0.05, -2.1855695e-09, 0.0814828, 0.070164695, -0.0014782995)
+use_collision = true
+size = Vector3(0.8, 0.5, 3)
+material = SubResource("StandardMaterial3D_h76s5")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Handle" unique_id=76999875]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.057602435, 0.070946805, 0)
+use_collision = true
+radius = 0.015
+height = 0.012
+material = SubResource("StandardMaterial3D_h76s5")
+
+[node name="Area3D" type="Area3D" parent="Handle" unique_id=108085226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.083, 0.06862699, -0.0042905454)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_h76s5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Handle/Area3D" unique_id=1658128488]
+shape = SubResource("BoxShape3D_qc4e1")

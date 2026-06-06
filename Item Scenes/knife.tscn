@@ -1,0 +1,62 @@
+[gd_scene format=4 uid="uid://b0h134ey4luy8"]
+
+[ext_resource type="Texture2D" uid="uid://cjm8s011c5mb" path="res://Assets/Kenney-Food/Textures/colormap.png" id="1_qqrw0"]
+[ext_resource type="Script" uid="uid://bysl1f8h6oldl" path="res://Item Scenes/Items.gd" id="1_skwqg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_skwqg"]
+size = Vector3(0.722229, 0.04711914, 0.24181747)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qoio5"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_qqrw0")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i2x30"]
+_surfaces = [{
+"aabb": AABB(-0.35812497, 0, -0.06633517, 0.71624994, 0.04, 0.13267034),
+"format": 34359742465,
+"index_count": 117,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAQAAAAQABAAAAAMABQADAAIAAwAFAAQAAgAGAAUABgAHAAUABAAFAAcACAAGAAIAAgABAAgABwAGAAgABAAJAAEAAQAJAAgABAAAAAoACAAKAAcABwAKAAQACgAIAAkACQAEAAoACwAMAA0ADgANAAwADQAPAAsADwANAA4ADAAQAA4AEQAQAAwADgAQABEADAALABEADgASAA8AEQASAA4ACwAPABMAEgATAA8ACwAUABEAEwAUAAsAEgAVABMAFAATABUAFQASABEAFAAWABEAEQAWABUAFQAWABQA"),
+"lods": [0.13891456, PackedByteArray("AAABAAIAAgADAAAAAQAAAAQABAAAAAMABQADAAIAAwAFAAQAAgAGAAUABgAHAAUABAAFAAcACAAGAAIAAgABAAgABwAGAAgABAAJAAEAAQAJAAgABAAAAAoACAAKAAcABwAKAAQACgAIAAkACQAEAAoA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 23,
+"vertex_data": PackedByteArray("IEuBvgrXIzz+MK07onDdPQrXIzyc+gE9onDdPQrXIzzi2TK9nQOdvgrXIzzi2TK916OIvgrXozyhER89KFy3vgrXozzi2TK9onDdPY/C9Tzi2TK9nQOdvo/C9Tzi2TK9onDdPY/C9Tyc+gE9onDdPQrXozy82oc9IEuBvo/C9Tz+MK074RCrPgrXIz0AErs6KFy3PgrXIz07PuC8KFy3PgAAAAA7PuC8KFy3PgAAAAC82oe94RCrPgAAAAAAErs6KFy3PgrXIz282oe9onDdPQrXIz2mz1u9onDdPQAAAACmz1u9wk2LPgAAAABgEb47wk2LPgrXIz1gEb47onDdPQAAAAB622W8onDdPQrXIz1622W8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mnuxh"]
+resource_name = "cooking-knife_cooking-knife"
+_surfaces = [{
+"aabb": AABB(-0.35812497, 0, -0.06633517, 0.71624994, 0.04, 0.13267034),
+"attribute_data": PackedByteArray("AABYP5qZeT8AAFg/mpl5PwAAWD+amXk/AABYP5qZeT8AAFg/ZmZGPwAAWD9mZkY/AABYP2ZmRj8AAFg/ZmZGPwAAWD8AAGA/AABYP5qZeT8AAFg/mpl5PwAAWD9mZkY/AABYP2ZmRj8AAFg/ZmZGPwAAWD9mZkY/AABYP5qZeT8AAFg/mpl5PwAAWD8AAGA/AAB4PwAAYD8AAHg/mpl5PwAAeD9mZkY/AAB4P2ZmRj8AAHg/ZmZGPwAAeD8AAGA/AAB4PwAAYD8AAHg/ZmZGPwAAeD8AAGA/AAB4PwAAYD8AAHg/AABgPwAAeD+amXk/AAB4P5qZeT8AAHg/mpl5PwAAeD8AAGA/AAB4PwAAYD8AAHg/mpl5PwAAeD9mZkY/AAB4PwAAYD8AAGA+ZmYGPwAAYD5mZgY/AABgPpqZOT8AAGA+mpk5PwAAYD6amTk/AABgPpqZOT8AAGA+mpk5PwAAYD6amTk/AABgPpqZOT8AAGA+mpk5PwAAYD5mZgY/AABgPmZmBj8AAGA+ZmYGPwAAYD5mZgY/AABgPmZmBj8AAGA+ZmYGPwAAYD5mZgY/AABgPpqZOT8AAGA+mpk5PwAAYD5mZgY/AABgPmZmBj8AAGA+ZmYGPwAAYD6amTk/AABgPpqZOT8AAGA+ZmYGPwAAYD6amTk/AABgPpqZOT8AAGA+ZmYGPwAAYD5mZgY/AABgPpqZOT8AAGA+mpk5PwAAYD5mZgY/AABgPpqZOT8AAGA+mpk5PwAAYD5mZgY/AABgPmZmBj8="),
+"format": 34359742487,
+"index_count": 117,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgACwAMAAgADQAOAA8ADwAQAA0AEAARAA0AEgATABQAFQAWABcAFwAYABUAGwAcAB0AHQAeABsAIQAiAB8AHwAgACEAGQAjACQAJAAaABkAJQAmACcAJwAoACUAKQAqACsAKwAsACkALAAtACkALAAuAC0ALwAwADEAMQAyAC8AMgAzAC8AMwA0AC8ANQA2ADcANwA4ADUAOQA6ADsAOwA8ADkAPQA+AD8APwBAAD0AQQBCAEMAQwBEAEEARQBGAEcARwBIAEUA"),
+"lods": [0.13891456, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgACwAMAAgADQAOAA8ADwAQAA0AEAARAA0AEgATABQAFQAWABcAFwAYABUAGQAVABgAGAAaABkAGwAcAB0AHQAeABsAGwAeAB8AHwAgABsA")],
+"material": SubResource("StandardMaterial3D_qoio5"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 73,
+"vertex_data": PackedByteArray("IEuBvgrXIzz+MK07onDdPQrXIzyc+gE9onDdPQrXIzzi2TK9nQOdvgrXIzzi2TK9nQOdvo/C9Tzi2TK9onDdPY/C9Tzi2TK9onDdPY/C9Tyc+gE9IEuBvo/C9Tz+MK07KFy3vgrXozzi2TK9nQOdvgrXIzzi2TK9onDdPQrXIzzi2TK9onDdPY/C9Tzi2TK9nQOdvo/C9Tzi2TK9onDdPY/C9Tyc+gE9onDdPY/C9Tzi2TK9onDdPQrXIzzi2TK9onDdPQrXIzyc+gE9onDdPQrXozy82oc916OIvgrXozyhER89IEuBvgrXIzz+MK07IEuBvo/C9Tz+MK07IEuBvo/C9Tz+MK07onDdPY/C9Tyc+gE9onDdPQrXozy82oc916OIvgrXozyhER89nQOdvo/C9Tzi2TK9KFy3vgrXozzi2TK916OIvgrXozyhER89onDdPQrXozy82oc9onDdPQrXIzyc+gE9IEuBvgrXIzz+MK07nQOdvgrXIzzi2TK9KFy3vgrXozzi2TK916OIvgrXozyhER89IEuBvgrXIzz+MK07IEuBvo/C9Tz+MK0716OIvgrXozyhER894RCrPgrXIz0AErs6KFy3PgrXIz07PuC8KFy3PgAAAAA7PuC84RCrPgAAAAAAErs64RCrPgAAAAAAErs6KFy3PgAAAAA7PuC8KFy3PgAAAAC82oe9onDdPQAAAACmz1u9wk2LPgAAAABgEb47onDdPQAAAAB622W8onDdPQrXIz2mz1u9KFy3PgrXIz282oe9KFy3PgrXIz07PuC84RCrPgrXIz0AErs6wk2LPgrXIz1gEb47onDdPQrXIz1622W8wk2LPgrXIz1gEb47wk2LPgAAAABgEb47onDdPQAAAAB622W8onDdPQrXIz1622W8KFy3PgrXIz07PuC8KFy3PgrXIz282oe9KFy3PgAAAAC82oe9KFy3PgAAAAA7PuC84RCrPgrXIz0AErs64RCrPgAAAAAAErs6wk2LPgAAAABgEb47wk2LPgrXIz1gEb47onDdPQrXIz2mz1u9onDdPQAAAACmz1u9KFy3PgAAAAC82oe9KFy3PgrXIz282oe9onDdPQAAAAB622W8onDdPQAAAACmz1u9onDdPQrXIz2mz1u9onDdPQrXIz1622W8/38AAP///7//fwAA////v/9/AAD///+//38AAP///7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v/////8AAP+//////wAA/7//////AAD/v/////8AAP+//////wAA/7////9//////////3//////////f/////////9//////////3//////AABXpgAA/78AAFemAAD/vwAAV6YAAP+/7X2x4QAA/7/tfbHhAAD/v+19seEAAP+/7X2x4QAA/79YbtLaAAD/v1hu0toAAP+/7X1NHgAA/7/tfU0eAAD/v+19TR4AAP+/7X1NHgAA/79YbiwlAAD/v1huLCUAAP+/WG4sJQAA/79YbiwlAAD/v1hu0toAAP+/WG7S2gAA/79Vq/9///+q1fbd/3////ru9t3/f///+u5Vq/9///+q1f9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//f///AAD/v+B8/3/f/P+/4Hz/f9/8/78vcv9/L/L/vy9y/38v8v+/9t3/f///+u7///9//////////3//////9t3/f///+u5Vq/9///+q1VWr/3///6rV4Hz/f9/8/7/gfP9/3/z/vwAA0vksBv+/AADS+SwG/78AANL5LAb/vwAA0vksBv+/AAD/f/9//78AAP9//3//vwAA/3//f/+/AAD/f/9//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_i2x30")
+
+[node name="Knife" type="RigidBody3D" unique_id=1271035805]
+collision_layer = 3
+script = ExtResource("1_skwqg")
+hold_rotation = Vector3(0, 0, 50)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1453231710]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.025816172, 0)
+shape = SubResource("BoxShape3D_skwqg")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=2008477826]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=893523682]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_mnuxh")

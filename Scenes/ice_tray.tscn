@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bavtnvw6rky1o"]
+
+[ext_resource type="Script" uid="uid://bysl1f8h6oldl" path="res://Item Scenes/Items.gd" id="1_caewe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ar77u"]
+size = Vector3(0.20715332, 0.057434082, 0.60253906)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ar77u"]
+transparency = 4
+albedo_color = Color(0, 0.7882353, 0.79607844, 0.59607846)
+roughness = 0.2
+emission = Color(0.77168405, 0.77168405, 0.7716839, 1)
+emission_energy_multiplier = 0.5
+
+[node name="Ice_Tray" type="RigidBody3D" unique_id=1918303358]
+collision_layer = 3
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_caewe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1357037351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1035156e-05, 0.00045776367, 0)
+shape = SubResource("BoxShape3D_ar77u")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=60322827]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Pivot" unique_id=1292227213]
+size = Vector3(0.2, 0.05, 0.6)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Pivot" unique_id=889125388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, 0.23718685)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Pivot" unique_id=691698953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, 0.14032573)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Pivot" unique_id=1823837779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, 0.042622328)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Pivot" unique_id=2068014915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, -0.054238766)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Pivot" unique_id=287126428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, -0.15531124)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Pivot" unique_id=2142536696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045709193, 0.009553932, -0.24711871)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Pivot" unique_id=1723301429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, 0.23718685)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Pivot" unique_id=1269589338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, 0.14032573)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Pivot" unique_id=1997632494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, 0.042622328)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Pivot" unique_id=786964927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, -0.054238766)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Pivot" unique_id=1318230094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, -0.15531124)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Pivot" unique_id=1017628047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046940513, 0.009553932, -0.24711871)
+size = Vector3(0.08, 0.05, 0.08)
+material = SubResource("StandardMaterial3D_ar77u")

@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bo3vtjwcarer4"]
+
+[ext_resource type="Script" uid="uid://bysl1f8h6oldl" path="res://Item Scenes/Items.gd" id="1_cpljq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nocda"]
+height = 0.24868774
+radius = 0.1171875
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5k8mu"]
+transparency = 4
+albedo_color = Color(0.71292204, 0.99900967, 0.99999994, 0.2)
+roughness = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nu7b1"]
+albedo_color = Color(0.35686275, 0.5921569, 0.99607843, 1)
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_leyds"]
+albedo_color = Color(0.4849202, 0.4849202, 0.4849202, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l1ef"]
+albedo_color = Color(0.35686275, 0.5921569, 0.99607843, 1)
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxlaa"]
+transparency = 4
+albedo_color = Color(0.5294118, 0.1254902, 0.35686275, 0.9490196)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h3fcb"]
+material = SubResource("StandardMaterial3D_mxlaa")
+top_radius = 0.07
+bottom_radius = 0.07
+height = 0.1
+
+[node name="Mixer_Jar" type="RigidBody3D" unique_id=1727786503]
+collision_layer = 3
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_cpljq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1436656251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012242705, -0.016625822, 0)
+shape = SubResource("CylinderShape3D_nocda")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=1593457643]
+
+[node name="Jar" type="CSGCombiner3D" parent="Pivot" unique_id=556784411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016976774, -0.0048835874, 0)
+
+[node name="OuterJar" type="CSGCylinder3D" parent="Pivot/Jar" unique_id=1030650218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019751996, -0.02073145, 0)
+radius = 0.09
+height = 0.22
+material = SubResource("StandardMaterial3D_5k8mu")
+
+[node name="Handle" type="CSGBox3D" parent="Pivot/Jar" unique_id=270256261]
+transform = Transform3D(0.96592575, -0.258819, 0, 0.258819, 0.96592575, 0, 0, 0, 1, 0.08535117, 0.009884417, 0.0021193475)
+size = Vector3(0.01, 0.15, 0.04)
+material = SubResource("StandardMaterial3D_nu7b1")
+
+[node name="Blade1" type="CSGBox3D" parent="Pivot/Jar" unique_id=2031296044]
+transform = Transform3D(0.64278764, -0.76604444, 0, 0.76604444, 0.64278764, 0, 0, 0, 1, -0.02011253, -0.10885006, 0)
+size = Vector3(0.005, 0.03, 0.1)
+material = SubResource("StandardMaterial3D_leyds")
+
+[node name="Blade2" type="CSGBox3D" parent="Pivot/Jar" unique_id=814161847]
+transform = Transform3D(-2.809714e-08, -3.3484866e-08, 1, -0.76604444, 0.64278764, 0, -0.64278764, -0.76604444, -4.371139e-08, -0.02011253, -0.10885006, 0)
+size = Vector3(0.005, 0.03, 0.1)
+material = SubResource("StandardMaterial3D_leyds")
+
+[node name="MixerLid" type="CSGCylinder3D" parent="Pivot" unique_id=2107830836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002775222, 0.09404683, 0)
+radius = 0.1
+height = 0.02
+material = SubResource("StandardMaterial3D_6l1ef")
+
+[node name="State3_Water" type="MeshInstance3D" parent="Pivot" unique_id=1277815057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008242607, -0.07540068, 0)
+mesh = SubResource("CylinderMesh_h3fcb")

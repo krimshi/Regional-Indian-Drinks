@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://csr0dg4l5dp4i"]
+
+[ext_resource type="PackedScene" uid="uid://bnkqgdptoffp2" path="res://Scenes/tap.tscn" id="1_p4gxi"]
+[ext_resource type="PackedScene" uid="uid://bv8swg0ufjkyg" path="res://Scenes/interactive_drawer.tscn" id="2_r002j"]
+[ext_resource type="PackedScene" uid="uid://bc2v8f6xvqqp2" path="res://Item Scenes/cutting_board.tscn" id="3_je6f7"]
+[ext_resource type="PackedScene" uid="uid://1uq3jt11c6ca" path="res://Item Scenes/mixer_grinder.tscn" id="4_hn5bs"]
+[ext_resource type="Script" uid="uid://dq5obcap58r8q" path="res://Scenes/ingredient_zone.gd" id="5_pev37"]
+[ext_resource type="Script" uid="uid://bso5vxfey0arw" path="res://Scenes/square_drop_zone.gd" id="6_83qgv"]
+[ext_resource type="Script" uid="uid://c4y05wbmjc4xr" path="res://Scenes/juice_make_zone.gd" id="7_kaeei"]
+[ext_resource type="PackedScene" uid="uid://wr2j35h3qtgv" path="res://Item Scenes/combined_straining_station.tscn" id="7_wcn8j"]
+[ext_resource type="PackedScene" uid="uid://drwcvp6t8u3iv" path="res://Item Scenes/extracted_sharbat_bowl.tscn" id="8_dxe0i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t53gl"]
+albedo_color = Color(0.89411765, 0.77254903, 0.59607846, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4gxi"]
+albedo_color = Color(0.6862745, 0.50980395, 0.36862746, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r002j"]
+albedo_color = Color(0.29072073, 0.2907207, 0.2907207, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hn5bs"]
+size = Vector3(0.75439453, 0.03656006, 1.0629883)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pev37"]
+albedo_color = Color(3.3691526e-06, 0.6743229, 0.6813645, 1)
+emission_enabled = true
+emission = Color(0.3386096, 0.86953306, 0.99999994, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_83qgv"]
+material = SubResource("StandardMaterial3D_pev37")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_83qgv"]
+size = Vector3(1.1477051, 0.03656006, 1.1003418)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kaeei"]
+albedo_color = Color(3.3691526e-06, 0.6743229, 0.6813645, 1)
+emission_enabled = true
+emission = Color(0.3386096, 0.86953306, 0.99999994, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wcn8j"]
+material = SubResource("StandardMaterial3D_kaeei")
+size = Vector2(3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxe0i"]
+size = Vector3(1.1477051, 0.03656006, 1.1003418)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kaeei"]
+material = SubResource("StandardMaterial3D_pev37")
+size = Vector2(3, 2)
+
+[node name="Kitchen-Counter" type="Node3D" unique_id=1931137095]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1060862542]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=656224771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+size = Vector3(8, 1.4, 1.25)
+material = SubResource("StandardMaterial3D_t53gl")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1109370660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03447237, 1.225, -0.04033204)
+size = Vector3(8.068945, 0.05, 1.330664)
+material = SubResource("StandardMaterial3D_p4gxi")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1926923870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0141113, 1.0899171, -0.06597854)
+operation = 2
+size = Vector3(1.5, 0.33334962, 0.8)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=736162396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0743005, 0.93159425, -0.03260207)
+radius = 0.1
+height = 0.05
+material = SubResource("StandardMaterial3D_r002j")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=904493277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.045, 0.8, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=429667284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0453316, 0.2, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1992648065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8445778, 0.8, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1626181312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8445778, 0.2, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1543280122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7546682, 0.8, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D" unique_id=220625658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7416682, 0.2, -0.2)
+operation = 2
+size = Vector3(1.3691406, 0.37194824, 1)
+
+[node name="Tap" parent="." unique_id=1030038441 instance=ExtResource("1_p4gxi")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.0901484, 1.2414702, 0.45045254)
+
+[node name="InteractiveDrawer" parent="." unique_id=1222761957 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0453316, 0.2, -0.1660678)
+
+[node name="InteractiveDrawer2" parent="." unique_id=1365246807 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0453316, 0.8, -0.1660678)
+
+[node name="InteractiveDrawer3" parent="." unique_id=1651345313 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8445778, 0.8, -0.1660678)
+
+[node name="InteractiveDrawer4" parent="." unique_id=1325028659 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8445778, 0.2, -0.1660678)
+
+[node name="InteractiveDrawer5" parent="." unique_id=712899212 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7546682, 0.8, -0.1660678)
+
+[node name="InteractiveDrawer6" parent="." unique_id=901627314 instance=ExtResource("2_r002j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7416682, 0.2, -0.1660678)
+
+[node name="Cutting_Board" parent="." unique_id=1655126549 instance=ExtResource("3_je6f7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.35, 1.25, -0.0882992)
+
+[node name="Mixer_Grinder" parent="." unique_id=1162251199 instance=ExtResource("4_hn5bs")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.3019419, 1.3296859, -0.17392178)
+
+[node name="IngredientZone" type="Area3D" parent="." unique_id=698857321 node_paths=PackedStringArray("glow_plane", "pour_target", "water_pour_target", "mixer_grinder") groups=["DropZone"]]
+script = ExtResource("5_pev37")
+glow_plane = NodePath("GlowPlane")
+pour_target = NodePath("PourTarget")
+water_pour_target = NodePath("WaterPourTarget")
+mixer_grinder = NodePath("../Mixer_Grinder")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="IngredientZone" unique_id=1408952677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4579742, 1.2706964, -0.07077536)
+shape = SubResource("BoxShape3D_hn5bs")
+
+[node name="GlowPlane" type="MeshInstance3D" parent="IngredientZone" unique_id=1787964420]
+transform = Transform3D(0.39754105, 0, 0, 0, 1, 0, 0, 0, 0.5766764, -1.4688902, 1.261069, -0.062139153)
+mesh = SubResource("PlaneMesh_83qgv")
+
+[node name="PourTarget" type="Marker3D" parent="IngredientZone" unique_id=910631709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5005696, 1.9921397, -0.1742324)
+
+[node name="WaterPourTarget" type="Marker3D" parent="IngredientZone" unique_id=660502752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.224158, 1.9921397, -0.1742324)
+
+[node name="SquareDropZone" type="Area3D" parent="." unique_id=1534097536 node_paths=PackedStringArray("glow_plane", "combined_static_assembly", "water_pour_target") groups=["DropZone", "SquareCounterZone"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2914131, 0, 0)
+script = ExtResource("6_83qgv")
+glow_plane = NodePath("GlowPlane")
+combined_static_assembly = NodePath("../Combined_Straining_Station")
+water_pour_target = NodePath("WaterPourTarget")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SquareDropZone" unique_id=1025070484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3357818, 1.2706964, -0.08945212)
+shape = SubResource("BoxShape3D_83qgv")
+
+[node name="GlowPlane" type="MeshInstance3D" parent="SquareDropZone" unique_id=622705818]
+transform = Transform3D(0.39754105, 0, 0, 0, 1, 0, 0, 0, 0.5766764, -1.3225214, 1.261069, -0.062139153)
+mesh = SubResource("PlaneMesh_wcn8j")
+
+[node name="WaterPourTarget" type="Marker3D" parent="SquareDropZone" unique_id=1267220785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5005727, 1.7709641, -0.37295267)
+
+[node name="JuiceMakeZone" type="Area3D" parent="." unique_id=85190142 node_paths=PackedStringArray("glow_plane") groups=["DropZone"]]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2914131, 0, 0)
+visible = false
+script = ExtResource("7_kaeei")
+glow_plane = NodePath("GlowPlane")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JuiceMakeZone" unique_id=1124942270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3357818, 1.2706964, -0.08945212)
+shape = SubResource("BoxShape3D_dxe0i")
+
+[node name="GlowPlane" type="MeshInstance3D" parent="JuiceMakeZone" unique_id=1616829370]
+transform = Transform3D(0.39754105, 0, 0, 0, 1, 0, 0, 0, 0.5766764, -1.3225214, 1.261069, -0.062139153)
+mesh = SubResource("PlaneMesh_kaeei")
+
+[node name="Combined_Straining_Station" parent="." unique_id=1180995308 node_paths=PackedStringArray("final_sharbat_bowl", "juice_make_zone") instance=ExtResource("7_wcn8j")]
+process_mode = 4
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.059516996, 1.3602122, -0.37754548)
+visible = false
+final_sharbat_bowl = NodePath("../Extracted_Sharbat_Bowl")
+juice_make_zone = NodePath("../JuiceMakeZone")
+
+[node name="Extracted_Sharbat_Bowl" parent="." unique_id=1181984501 instance=ExtResource("8_dxe0i")]
+process_mode = 4
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.059516996, 1.7419115, -0.37754548)
+visible = false
+
+[node name="PourTarget" type="Marker3D" parent="Extracted_Sharbat_Bowl" unique_id=338769946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43724453, -0.12879428)

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://7ikafxa01jfg"]
+
+[ext_resource type="AudioStream" uid="uid://cihp7u3vl2y2i" path="res://Assets/Music/kissan4-cozy-rainfall-350614.mp3" id="1_pu4hd"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=1795499129]
+stream = ExtResource("1_pu4hd")
+autoplay = true

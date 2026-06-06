@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ctxokaqkcpnnp"]
+
+[ext_resource type="Script" uid="uid://c7u275asc2g42" path="res://controls_ui.gd" id="1_drr47"]
+
+[node name="ControlsUI" type="CanvasLayer" unique_id=317418124]
+script = ExtResource("1_drr47")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1572698624]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = -100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=762759829]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label1" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1059868974]
+layout_mode = 2
+text = "[Ctrl + C] Toggle Controls"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=816455177]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=500208831]
+layout_mode = 2
+text = "[W A S D] Move"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1722970080]
+layout_mode = 2
+text = "[C] Crouch"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1194768675]
+layout_mode = 2
+text = "[Left Click] Grab / Drop Item"
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2139136954]
+layout_mode = 2
+text = "[Right Click] Interact / Read"
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1817788728]
+layout_mode = 2
+text = "[Scroll Wheel] Push / Pull Held Item"
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer" unique_id=147205159]
+layout_mode = 2
+text = "[Esc] Free Mouse"

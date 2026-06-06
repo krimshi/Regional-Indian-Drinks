@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bvlsauol871cm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlip7"]
+albedo_color = Color(0.78431374, 0.7137255, 0.627451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q48bj"]
+albedo_color = Color(0.99215686, 0.9411765, 0.7490196, 1)
+emission_enabled = true
+emission = Color(0.99215686, 0.6901961, 0.3882353, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hna8l"]
+albedo_color = Color(0.5764706, 0.35686275, 0.22745098, 1)
+
+[node name="Ceiling-Lamp" type="Node3D" unique_id=1883132955]
+
+[node name="OuterCover" type="CSGCombiner3D" parent="." unique_id=575910822]
+material_override = SubResource("StandardMaterial3D_wlip7")
+
+[node name="OuterSphere" type="CSGSphere3D" parent="OuterCover" unique_id=316368738]
+radial_segments = 15
+rings = 15
+
+[node name="InnerSphere" type="CSGSphere3D" parent="OuterCover" unique_id=1022446840]
+operation = 2
+radius = 0.45
+radial_segments = 15
+rings = 15
+
+[node name="Slicer" type="CSGBox3D" parent="OuterCover" unique_id=1565667828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.21533203, 0)
+operation = 2
+size = Vector3(1, 0.6, 1)
+
+[node name="Bulb" type="CSGSphere3D" parent="." unique_id=135416685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.081338406, 0)
+material_override = SubResource("StandardMaterial3D_q48bj")
+radius = 0.35
+
+[node name="wooden_Base" type="CSGCylinder3D" parent="." unique_id=373938658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_hna8l")
+radius = 0.35
+height = 0.1

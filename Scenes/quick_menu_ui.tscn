@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cqt70qm3f8gx4"]
+
+[ext_resource type="Script" uid="uid://dmfxaq52fjg5c" path="res://quick_menu_ui.gd" id="1_uxpc5"]
+
+[node name="QuickMenuUI" type="CanvasLayer" unique_id=779079184]
+process_mode = 3
+script = ExtResource("1_uxpc5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1074378971]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=690824874]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="RestartButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1527636497]
+layout_mode = 2
+text = "Restart"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=677775455]
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

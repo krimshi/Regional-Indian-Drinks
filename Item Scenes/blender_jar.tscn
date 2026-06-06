@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://3bfbjcln413b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4se7f"]
+transparency = 4
+albedo_color = Color(0.71292204, 0.99900967, 0.99999994, 0.2)
+roughness = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_liyh5"]
+albedo_color = Color(0.35686275, 0.5921569, 0.99607843, 1)
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyi7c"]
+albedo_color = Color(0.4849202, 0.4849202, 0.4849202, 1)
+roughness = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4e2rw"]
+height = 0.2424469
+radius = 0.092285156
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awuvf"]
+transparency = 4
+albedo_color = Color(0.49010885, 0.9960334, 1, 0.4)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4se7f"]
+material = SubResource("StandardMaterial3D_awuvf")
+top_radius = 0.07
+bottom_radius = 0.07
+height = 0.1
+
+[node name="Blender_Jar" type="RigidBody3D" unique_id=893344416]
+collision_layer = 3
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="Jar" type="CSGCombiner3D" parent="." unique_id=573529565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020511098, 0, 0)
+
+[node name="OuterJar" type="CSGCylinder3D" parent="Jar" unique_id=1657251176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019751996, -0.02073145, 0)
+radius = 0.09
+height = 0.22
+material = SubResource("StandardMaterial3D_4se7f")
+
+[node name="InnerJar" type="CSGCylinder3D" parent="Jar" unique_id=1428023592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019316152, -0.012436569, 0)
+operation = 2
+radius = 0.08
+height = 0.22
+material = SubResource("StandardMaterial3D_4se7f")
+
+[node name="Handle" type="CSGBox3D" parent="Jar" unique_id=125301813]
+transform = Transform3D(0.96592575, -0.258819, 0, 0.258819, 0.96592575, 0, 0, 0, 1, 0.08535117, 0.009884417, 0.0021193475)
+size = Vector3(0.01, 0.15, 0.04)
+material = SubResource("StandardMaterial3D_liyh5")
+
+[node name="Blade1" type="CSGBox3D" parent="Jar" unique_id=614857049]
+transform = Transform3D(0.64278764, -0.76604444, 0, 0.76604444, 0.64278764, 0, 0, 0, 1, -0.02011253, -0.10885006, 0)
+size = Vector3(0.005, 0.03, 0.1)
+material = SubResource("StandardMaterial3D_vyi7c")
+
+[node name="Blade2" type="CSGBox3D" parent="Jar" unique_id=1216522085]
+transform = Transform3D(-2.809714e-08, -3.3484866e-08, 1, -0.76604444, 0.64278764, 0, -0.64278764, -0.76604444, -4.371139e-08, -0.02011253, -0.10885006, 0)
+size = Vector3(0.005, 0.03, 0.1)
+material = SubResource("StandardMaterial3D_vyi7c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=301526668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001414597, -0.011878967, 0)
+shape = SubResource("CylinderShape3D_4e2rw")
+
+[node name="State3_Water" type="MeshInstance3D" parent="." unique_id=1721915213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19471526, 0.3202382, 0)
+visible = false
+mesh = SubResource("CylinderMesh_4se7f")

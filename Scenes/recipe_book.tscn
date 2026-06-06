@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://ww4x4v4tg51s"]
+
+[ext_resource type="Script" uid="uid://cjoyfpay33kn" path="res://Scenes/recipe_book.gd" id="1_focq1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcboq"]
+albedo_color = Color(0.54853636, 0.2282364, 0.022060249, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_focq1"]
+albedo_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4i557"]
+size = Vector3(0.48535156, 0.17510986, 0.67388916)
+
+[node name="Recipe_Book" type="StaticBody3D" unique_id=1692518175]
+collision_layer = 3
+script = ExtResource("1_focq1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=271525450]
+transform = Transform3D(0.9848077, -0.17364816, 0, 0.16773126, 0.95125115, 0.258819, -0.044943456, -0.25488696, 0.96592575, 0.25217092, -0.010803223, 0.15992558)
+material_override = SubResource("StandardMaterial3D_wcboq")
+size = Vector3(0.4958496, 0.008666992, 0.33428955)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=91900917]
+transform = Transform3D(0.9848077, -0.17364816, 0, 0.16773126, 0.95125115, 0.258819, -0.044943456, -0.25488696, 0.96592575, 0.2518047, 0.0066173524, 0.14819157)
+size = Vector3(0.45410156, 0.03314209, 0.31082153)
+
+[node name="Label3D" type="Label3D" parent="CSGBox3D2" unique_id=431125464]
+transform = Transform3D(-1.21071935e-08, -0.38083017, 6.7055225e-08, -2.2351742e-08, 4.656613e-09, 0.7193167, -0.29803967, 1.4901161e-08, -1.4901161e-08, 0.002925247, 0.016589873, 0.004513815)
+pixel_size = 0.002
+modulate = Color(0.17785347, 0.17785347, 0.17785347, 1)
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+font_size = 10
+outline_size = 0
+autowrap_mode = 2
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=226559714]
+transform = Transform3D(-0.9848077, -0.17364812, -1.4585073e-07, -0.16773126, 0.95125115, 0.25881904, -0.04494331, 0.254887, -0.96592575, 0.25217092, -0.0109019205, -0.15716717)
+material_override = SubResource("StandardMaterial3D_wcboq")
+size = Vector3(0.4958496, 0.008666992, 0.34475708)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=897639923]
+transform = Transform3D(-0.9848077, -0.17364812, -1.4585073e-07, -0.16773126, 0.95125115, 0.25881904, -0.04494331, 0.254887, -0.96592575, 0.2518047, 0.009160563, -0.14969745)
+size = Vector3(0.45410156, 0.03314209, 0.31082153)
+
+[node name="Label3D2" type="Label3D" parent="CSGBox3D4" unique_id=188197708]
+transform = Transform3D(-7.450581e-09, 0.38492298, 1.7695129e-08, 2.9802322e-08, 1.44355e-08, 0.7534379, 0.27811944, 2.2351742e-08, 5.9604645e-08, -0.0031680763, 0.017967604, -0.00053443015)
+pixel_size = 0.002
+modulate = Color(0.17785347, 0.17785347, 0.17785347, 1)
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+font_size = 10
+outline_size = 0
+autowrap_mode = 2
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1126218400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5112129, -0.004272461, -0.0007324219)
+size = Vector3(0.02442578, 0.17041016, 0.6665039)
+material = SubResource("StandardMaterial3D_focq1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=332062513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25732422, -0.0046691895, 0.0010681152)
+shape = SubResource("BoxShape3D_4i557")

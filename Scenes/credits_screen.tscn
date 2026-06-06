@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://0gn3cwbjwknh"]
+
+[ext_resource type="Script" uid="uid://ciyor22k73tfi" path="res://credits_screen.gd" id="1_ekvdo"]
+
+[node name="CreditsScreen" type="Control" unique_id=1752704487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekvdo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1923523010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=321775478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1724961360]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Title Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=53831262]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "CREDITS"
+
+[node name="Music Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=59320799]
+layout_mode = 2
+text = "Music by kissan4 from Pixabay"
+
+[node name="Assets Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=239603862]
+layout_mode = 2
+text = "3D Models & Assets by Kenney (kenney.nl)"
+
+[node name="Images Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=521527923]
+layout_mode = 2
+text = "UI & Background Images generated using Google Gemini"
+
+[node name="Special Thanks Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1071067009]
+layout_mode = 2
+text = "Created by Krish"
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1158858358]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
